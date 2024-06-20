@@ -1,0 +1,97 @@
+<div class="row">
+    <div [ngClass]="isSidePanelVisibel ? 'col-8' : 'col-12'">
+        <div class="card">
+            <div class="card-header bg-primary">
+                <div class="row">
+                    <div class="col-6">Product List</div>
+                    <div class="col-6 text-end">
+                        <button class="btn btn-sm btn-success" (click)="openSidePanel()">New</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <div class="row">
+                <div class="col-3" *ngFor="let item of productList">
+                    <div class="card" >
+                        <img  class="card-img-top" alt="..." [src]="item.productImageUrl" >
+                        <div class="card-body">
+                          <h5 class="card-title">{{item.productName}}</h5>
+                          <p class="card-text">{{item.categoryName}}</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <div class="col-4" *ngIf="isSidePanelVisibel">
+        <div class="card">
+            <div class="card-header bg-primary">
+                <div class="row">
+                    <div class="col-6">New Product</div>
+                    <div class="col-6 text-end">
+                        <button class="btn btn-sm btn-success" (click)="closeSidePanel()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body">
+           <div class="row">
+            <div >
+                <form id="productForm">
+                    <div class="mb-3">
+                      <label for="productId" class="form-label">Product Id</label>
+                      <input type="number" class="form-control" id="productId" name="ProductId" [(ngModel)]="productObj.productId" readonly>
+                    </div>
+                    <div class="mb-3">
+                      <label for="productSku" class="form-label">Product SKU</label>
+                      <input type="text" class="form-control" id="productSku" name="ProductSku" [(ngModel)]="productObj.productSku" >
+                    </div>
+                    <div class="mb-3">
+                      <label for="productName" class="form-label">Product Name</label>
+                      <input type="text" class="form-control" id="productName" name="ProductName" [(ngModel)]="productObj.productName" >
+                    </div>
+                    <div class="mb-3">
+                      <label for="productPrice" class="form-label">Product Price</label>
+                      <input type="number" class="form-control" id="productPrice" name="ProductPrice" [(ngModel)]="productObj.productPrice" >
+                    </div>
+                    <div class="mb-3">
+                      <label for="productShortName" class="form-label">Product Short Name</label>
+                      <input type="text" class="form-control" id="productShortName" name="ProductShortName" [(ngModel)]="productObj.productShortName" >
+                    </div>
+                    <div class="mb-3">
+                      <label for="productDescription" class="form-label">Product Description</label>
+                      <textarea class="form-control" id="productDescription" name="ProductDescription" rows="3" [(ngModel)]="productObj.productDescription" ></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <label for="deliveryTimeSpan" class="form-label">Delivery Time Span</label>
+                      <input type="text" class="form-control" id="deliveryTimeSpan" name="DeliveryTimeSpan" [(ngModel)]="productObj.deliveryTimeSpan" >
+                    </div>
+                    <div class="mb-3">
+                      <label for="categoryId" class="form-label">Category Id</label>
+                        <select class="form-select" id="categoryId" name="CategoryId" [(ngModel)]="productObj.categoryId" >
+                          <option *ngFor="let item of categoryList" [value]="item.categoryId">{{item.categoryName}}</option>
+                        </select>
+                      <input type="number" class="form-control" id="categoryId" name="CategoryId" [(ngModel)]="productObj.categoryId" >
+                    </div>
+                    <div class="mb-3">
+                      <label for="productImageUrl" class="form-label">Product Image URL</label>
+                      <input type="url" class="form-control" id="productImageUrl" name="ProductImageUrl" [(ngModel)]="productObj.productImageUrl" >
+                    </div>
+                    <div class="mb-3">
+                      <label for="userId" class="form-label">User Id</label>
+                      <input type="number" class="form-control" id="userId" name="UserId" [(ngModel)]="productObj.userId" readonly>
+                    </div>
+                    <button type="submit" class="btn btn-primary" (click)="onSave()">Submit Product</button>
+                    <button type="submit" class="btn btn-primary">Reset</button>
+                  </form>
+            </div>
+           </div>
+
+        </div>
+    </div>
+</div>
