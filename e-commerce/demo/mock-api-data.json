@@ -104,7 +104,6 @@
       "id": "ee6d"
     },
     {
-      "id": "daed",
       "aboutYou": "I love exploring new technologies.",
       "age": 21,
       "agreetc": null,
@@ -123,25 +122,26 @@
         "Hindi"
       ],
       "mobNumber": "123-5213-2156",
-      "name": "Alica Smith",
+      "name": "Alica Smith K",
       "password": "123456",
       "uploadPhoto": "C:\\fakepath\\download.png",
-      "role": "seller"
+      "role": "seller",
+      "id": "daed"
     }
   ],
   "products": [
     {
       "id": "1",
-      "name": "Polyester Door Curtain",
-      "uploadPhoto": "https://rukminim1.flixcart.com/image/832/832/jcf487k0/curtain/w/e/y/elegant-cream-door-curtains-set-of-2-213-soe-fsb-120-120-eyelet-original-imaffk7f9wng4v4m.jpeg",
+      "name": "Hiar Oils",
+      "uploadPhoto": "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg",
       "productDesc": "Transform the ambiance of your home with these elegant, crushed texture, light weight, solid color curtains. These curtains are available in several colors and sizes to match to your home decor and the gracefully flowing polyester is durable and machine washable for your convenience.",
       "mrp": "1000",
       "dp": "499",
       "status": "publish"
     },
     {
-      "id": "1",
-      "name": "Polyester Door Curtain",
+      "id": "2",
+      "name": "Watter bottles",
       "uploadPhoto": "https://rukminim1.flixcart.com/image/832/832/jcf487k0/curtain/w/e/y/elegant-cream-door-curtains-set-of-2-213-soe-fsb-120-120-eyelet-original-imaffk7f9wng4v4m.jpeg",
       "productDesc": "Transform the ambiance of your home with these elegant, crushed texture, light weight, solid color curtains. These curtains are available in several colors and sizes to match to your home decor and the gracefully flowing polyester is durable and machine washable for your convenience.",
       "mrp": "1000",
@@ -149,13 +149,40 @@
       "status": "draft"
     },
     {
-      "id": "1",
-      "name": "Polyester Door Curtain",
-      "uploadPhoto": "https://rukminim1.flixcart.com/image/832/832/jcf487k0/curtain/w/e/y/elegant-cream-door-curtains-set-of-2-213-soe-fsb-120-120-eyelet-original-imaffk7f9wng4v4m.jpeg",
-      "productDesc": "Transform the ambiance of your home with these elegant, crushed texture, light weight, solid color curtains. These curtains are available in several colors and sizes to match to your home decor and the gracefully flowing polyester is durable and machine washable for your convenience.",
-      "mrp": "1000",
-      "dp": "499",
+      "id": "47ec",
+      "name": "i Phones",
+      "uploadPhoto": "https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "productDesc": "mobile telephone, portable device for connecting to a telecommunications network in order to transmit and receive voice, video, or other data. Mobile phones typically connect to the public switched telephone network (PSTN) through one of two categories: cellular telephone systems or global satellite-based telephony",
+      "mrp": "20000",
+      "dp": "20",
+      "status": "publish"
+    },
+    {
+      "id": "5c5e",
+      "name": "ice Cream",
+      "uploadPhoto": "https://images.pexels.com/photos/380954/pexels-photo-380954.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "productDesc": "Ice cream is a frozen dessert typically made from milk or cream that has been flavoured with a sweetener, either sugar or an alternative, and a spice, such as cocoa or vanilla, or with fruit, such as strawberries or peaches.",
+      "mrp": "2000",
+      "dp": "10",
       "status": "inactive"
+    },
+    {
+      "id": "ff5d",
+      "name": "Drinks",
+      "uploadPhoto": "https://images.pexels.com/photos/3819969/pexels-photo-3819969.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "productDesc": "In the United States, one \"standard\" drink (or one alcoholic drink equivalent) contains roughly 14 grams of pure alcohol, which is found in: 12 ounces of regular beer, which is usually about 5% alcohol. 5 ounces of wine, which is typically about 12% alcohol. 1.5 ounces of distilled spirits, which is about 40% alcohol.",
+      "mrp": "60",
+      "dp": "5",
+      "status": "publish"
+    },
+    {
+      "id": "0465",
+      "name": "Food",
+      "uploadPhoto": "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "productDesc": "Food is one of the basic necessities of life. Food contains nutrients—substances essential for the growth, repair, and maintenance of body tissues and for the regulation of vital processes. Nutrients provide the energy our bodies need to function. The energy in food is measured in units called calories.",
+      "mrp": "1500",
+      "dp": "20",
+      "status": "publish"
     }
   ],
   "orders": [
@@ -182,6 +209,78 @@
       },
       "contact": "09040398006",
       "dateTime": "18/07/2019"
+    },
+    {
+      "id": 0,
+      "userId": "ba9f",
+      "sellerId": 2,
+      "product": {
+        "id": "1",
+        "name": "Hiar Oils",
+        "uploadPhoto": "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg",
+        "productDesc": "Transform the ambiance of your home with these elegant, crushed texture, light weight, solid color curtains. These curtains are available in several colors and sizes to match to your home decor and the gracefully flowing polyester is durable and machine washable for your convenience.",
+        "mrp": "1000",
+        "dp": "499",
+        "status": "publish"
+      },
+      "deliveryAddress": {
+        "id": 0,
+        "addLine1": "ahmeda",
+        "addLine2": "swds",
+        "city": "ahmedabad",
+        "state": "UP",
+        "zipCode": "380026"
+      },
+      "contact": "998655525",
+      "dateTime": "6/21/2024"
+    },
+    {
+      "id": 0,
+      "userId": "ba9f",
+      "sellerId": 2,
+      "product": {
+        "id": "2",
+        "name": "Watter bottles",
+        "uploadPhoto": "https://rukminim1.flixcart.com/image/832/832/jcf487k0/curtain/w/e/y/elegant-cream-door-curtains-set-of-2-213-soe-fsb-120-120-eyelet-original-imaffk7f9wng4v4m.jpeg",
+        "productDesc": "Transform the ambiance of your home with these elegant, crushed texture, light weight, solid color curtains. These curtains are available in several colors and sizes to match to your home decor and the gracefully flowing polyester is durable and machine washable for your convenience.",
+        "mrp": "1000",
+        "dp": "499",
+        "status": "draft"
+      },
+      "deliveryAddress": {
+        "id": 0,
+        "addLine1": "ahmeda",
+        "addLine2": "swds",
+        "city": "ahmedabad",
+        "state": "UP",
+        "zipCode": "380026"
+      },
+      "contact": "998655525",
+      "dateTime": "6/21/2024"
+    },
+    {
+      "id": 0,
+      "userId": "ba9f",
+      "sellerId": 2,
+      "product": {
+        "id": "1",
+        "name": "Hiar Oils",
+        "uploadPhoto": "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg",
+        "productDesc": "Transform the ambiance of your home with these elegant, crushed texture, light weight, solid color curtains. These curtains are available in several colors and sizes to match to your home decor and the gracefully flowing polyester is durable and machine washable for your convenience.",
+        "mrp": "1000",
+        "dp": "499",
+        "status": "publish"
+      },
+      "deliveryAddress": {
+        "id": 0,
+        "addLine1": "ahmeda",
+        "addLine2": "swds",
+        "city": "ahmedabad",
+        "state": "UP",
+        "zipCode": "380026"
+      },
+      "contact": "998655525",
+      "dateTime": "6/21/2024"
     }
   ]
 }
