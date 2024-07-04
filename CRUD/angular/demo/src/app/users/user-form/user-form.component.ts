@@ -19,22 +19,22 @@ export class UserFormComponent implements OnInit {
 
   }
   editUserId!: string
-
   ngOnInit(): void {
+    this.getUser()
+  }
+
+  getUser(){
     this.editUserId = this.route.snapshot.params['id']
+
     if(this.editUserId){
       this.userService.getUser(this.editUserId).subscribe(result=>{
         this.userForm.patchValue(result)
       })
-
     }
-    
-
-    
   }
   userForm :FormGroup = this.formBuilder.group({
     name:['',Validators.required],
-    email:['',Validators.required],
+    email:['',[Validators.required,Validators.email]],
     age:['',Validators.required],
     address:['',Validators.required]
   })

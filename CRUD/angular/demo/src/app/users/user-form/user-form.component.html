@@ -5,7 +5,8 @@
             @else {
                 <h2 class="text-xl font-semibold">Add User</h2>
             }
-        <div class="flex flex-wrap mt-5">
+            
+        <div class=" mt-5">
            
             <form class="example-form" [formGroup]="userForm">
                 <mat-form-field class="w-full">
@@ -18,7 +19,7 @@
                     </mat-form-field>
                     <mat-form-field class="w-full">
                         <mat-label>Age</mat-label>
-                        <input type="number" matInput placeholder="+91 1234567890" formControlName="age">
+                        <input type="number" matInput placeholder="Enter Your Age" formControlName="age">
                     </mat-form-field>
                     <mat-form-field class="w-full">
                         <mat-label>Address</mat-label>
