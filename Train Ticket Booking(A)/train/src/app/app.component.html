@@ -1,36 +1,112 @@
 <header>
-  <!-- NavBar -->
-  <nav class="navbar navbar-expand-lg navbar-light nav-yellow  border-bottom border-top p-0">
-      <div class="container">
-          <a class="navbar-brand fs-4 fw-bold " href="#"><i class="fa fa-cart-shopping fs-4"
-                  style="color: #f54242;"></i><span class="text-white">
-                  Railway
-              </span></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-              aria-expanded="false" aria-label="Toggle navigation">
-              <!--Toggle  -->
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Nav Items -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0  text-center ">
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light nav-yellow  border-bottom border-top p-0">
+        <div class="container">
+            <a class="navbar-brand fs-4 fw-bold " href="#"><i class="fa fa-cart-shopping fs-4"></i><span
+                    class="text-dark">
+                    Railway
+                </span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <!--Toggle  -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Nav Items -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0  text-center ">
 
-                  <li class="nav-item">
-                      <a class="nav-link fw-semibold text-white  me-1" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link fw-semibold text-white  me-1" href="#">Trains</a>
-                  </li>
-                  <!-- cart -->
-                  <li class="nav-item">
-                      <a class="nav-link fw-semibold  text-white  me-1" href="#">Login</a>
-                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-dark  me-1" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-dark  me-1" href="#">Trains</a>
+                    </li>
+                    <!-- cart -->
+                    @if (loggedUser.passengerID == 0) {
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold  text-dark  me-1" (click)="openLogin()">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold  text-dark  me-1" (click)="openRegester()">Regestration</a>
+                    </li>
+                }
+                    @else {
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold  text-dark  me-1" >{{loggedUser.firstName}}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold  text-dark  me-1" (click)="onlogOff()">Log Off</a>
+                        </li>
+                    }
 
-
-              </ul>
-          </div>
-      </div>
-  </nav>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>
 <router-outlet></router-outlet>
+<div class="modal" id="regestrationModel">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-bg-secondary p-3">
+            <h2 class="text-center mb-4">Register</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="username" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstname" placeholder="Enter firstname"
+                        [(ngModel)]="registerObj.firstName" name="firstName">
+                </div>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" placeholder="Enter lastname"
+                        [(ngModel)]="registerObj.lastName" name="lastName">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email"
+                        [(ngModel)]="registerObj.email" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Mobile Number</label>
+                    <input type="tel" class="form-control" id="email" placeholder="Enter Number"
+                        [(ngModel)]="registerObj.phone" name="phone">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password"
+                        [(ngModel)]="registerObj.password" name="password">
+                </div>
+                <div class="d-flex">
+                    <button type="submit" class="col-md-6 btn btn-warning me-2"
+                        (click)="closeRegester()">Cancle</button>
+                    <button type="submit" class="col-md-6 btn btn-primary" (click)="onRegester()">Regestration</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal" id="loginModel">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-bg-secondary p-3">
+            <h2 class="text-center mb-4">Login</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Email address</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter phone"
+                        [(ngModel)]="loginObj.phone" name="phone">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password"
+                        [(ngModel)]="loginObj.password" name="password">
+                </div>
+                <div class="d-flex">
+                    <button type="submit" class="col-md-6 btn btn-warning me-2" (click)="closeLogin()">Cancle</button>
+                    <button type="submit" class="col-md-6 btn btn-primary" (click)="onLogin()">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+  

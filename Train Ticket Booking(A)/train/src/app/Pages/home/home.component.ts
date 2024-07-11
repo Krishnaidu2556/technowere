@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit{
   stationList: Istation[] = []
   formStationId: number = 0;
   toStationId: number = 0;
-  dateOfTravel: string = "";
+  dateOfTravel: string = '';
 
   constructor(private trainService:TrainService,private router:Router){}
 
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit{
   }
 
   onSearch(){
-    if(this.formStationId == 0 || this.toStationId == 0 || this.dateOfTravel ==""){
+    if(this.formStationId == 0 || this.toStationId == 0 || this.dateOfTravel == ""){
       alert('select Your Journey Details')  
     }else{
       if(this.formStationId ==  this.toStationId){

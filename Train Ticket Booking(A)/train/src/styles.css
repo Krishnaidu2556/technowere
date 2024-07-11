@@ -9,9 +9,24 @@
     border-radius: 20px;
 }
 .navbar {
-    background-color: #1e6a99 !important;
+    background-color: #edc120 !important;
     color: white !important;
 }
 .card-body {
     border: 1px solid gray !important;
+}
+  
+body{
+    background-image: url(https://images.unsplash.com/photo-1512967156419-ac29a2e81ddd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+.modal{
+    width: 600px;
+    background-color: white;
+    height: auto;
+    border-radius: 10px;
 }

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skip Button Example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+  </style>
+</head>
+
+<body class="flex items-center justify-center bg-gray-100 h-screen">
+  <div class="rounded-lg shadow-lg w-1/2">
+
+    <div id="question" class="question bg-white p-6 rounded-lg shadow-lg">
+      <h1 class="text-center text-4xl font-bold mb-4">Demo</h1>
+
+    <div class="grid grid-cols-2 gap-4 mb-6">
+      <div>
+        <h1 class="px-4 py-2 text-2xl font-semibold">Home Facts:</h1>
+        <table class="table-auto">
+          <tbody class="w-full">
+            <table class="table-auto w-full">
+              <tbody>
+                <tr class="text-left text-lg font-semibold  border-gray-400 bg-gray-200">
+                  <th class="px-4 py-4">Year Build:</th>
+                  <td class="px-4 py-4 text-green-500">1953</td>
+                </tr>
+                <tr class="text-left text-lg font-semibold  border-gray-400 bg-white-200">
+                  <th class="px-4 py-4">Home Area (sqft):</th>
+                  <td class="px-4 py-4 text-green-500">2087</td>
+                </tr>
+                <tr class="text-left text-lg font-semibold bg-gray-200">
+                  <th class="px-4 py-4">Solar:</th>
+                  <td class="px-4 py-4 text-red-500">No</td>
+                </tr>
+              </tbody>
+            </table>
+          </tbody>
+
+        </table>
+
+      </div>
+
+      <div>
+        <h1 class="px-4 py-2 text-2xl font-semibold">Home Facts:</h1>
+        <table class="table-auto w-full">
+          <tbody>
+            <tr class="text-left text-lg font-semibold  border-gray-400 bg-gray-200">
+              <th class="px-4 py-4">Electric Rate:</th>
+              <td class="px-4 py-4 text-blue-500 underline">SMUD 5-8 TOD rate</td>
+            </tr>
+            <tr class="text-left text-lg font-semibold  border-gray-400 bg-white-200">
+              <th class="px-4 py-4">Nat Gas Rate:</th>
+              <td class="px-4 py-4 text-blue-500 underline">PG&E G-1 rate</td>
+            </tr>
+            <tr class="text-left text-lg font-semibold  border-gray-400 bg-gray-200">
+              <th class="px-5 py-4">&nbsp</th>
+              <td class="px-4 py-4 text-blue-500 underline"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="flex items-center justify-end">
+      <a href="#" class="flex items-center space-x-2 text-orange-500 hover:underline">
+        <span class="text-lg">Edit</span>
+        <span class="material-icons text-2xl">edit</span>
+      </a>
+    </div>
+    <div class="flex justify-between items-center mt-6">
+      <div class="flex items-center justify-end"> 
+        <button onclick="showQuestion1()" class="bg-orange-500 text-white py-2 px-4 rounded-full hover:bg-orange-600">
+          <span class="text-xl font-bold p-2">Next</span>
+        </button>
+        
+      </div>
+
+      <div class="flex items-center justify-end space-x-2">
+        <button  class="prev bg-orange-200 text-orange-600 pt-2 px-1 rounded shadow hover:bg-orange-300">
+          <span class="material-icons">keyboard_arrow_up</span>
+        </button>
+        <div class="h-full w-px bg-gray-300"></div>
+        <button clas s="bg-ornext ange-200 text-orange-600 pt-2 px-1 rounded shadow hover:bg-orange-300">
+          <span class="next material-icons">keyboard_arrow_down</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="question1" class="question hidden bg-white p-6 rounded-lg shadow-lg">
+    <div class="flex flex-col gap-2 md:flex-col md:gap-4">
+      <p class="font-bold mb-3 text-lg">1. How is this home heated? (Choose the main system, if more than one)</p>
+      <div class="lg:flex gap-2 gap-col-2">
+        <div class="flex flex-col gap-2 w-full lg:w-1/2 xl:w-1/2">
+          <span
+            class="option px-4 py-4 text-lg border-4 border-green-200 rounded-lg text-xl font-semibold text-green-500 bg-green-100"
+            onclick="selectOption(this, 'nextButton1')">Central Natural Gas Furnace</span>
+          <span
+            class="option px-4 py-4 text-lg border-4 border-green-200 rounded-lg text-xl font-semibold text-green-500 bg-green-100"
+            onclick="selectOption(this, 'nextButton1')">Electric Resistance Furnace</span>
+          <span
+            class="option px-4 py-4 text-lg border-4 border-green-200 rounded-lg text-xl font-semibold text-green-500 bg-green-100"
+            onclick="selectOption(this, 'nextButton1')">Heat Pump (Central or Mini Split)</span>
+          <span
+            class="option px-4 py-4 text-lg border-4 border-green-200 rounded-lg text-xl font-semibold text-green-500 bg-green-100 mb-2"
+            onclick="selectOption(this, 'nextButton1')">Boiler with Radiator</span>
+        </div>
+        <div class="flex flex-col gap-2 w-full lg:w-1/2 xl:w-1/2">
+          <span
+            class="option px-4 py-4 text-lg border-4 border-green-200 rounded-lg text-xl font-semibold text-green-500 bg-green-100"
+            onclick="selectOption(this, 'nextButton1')">Central Natural Gas Furnace</span>
+          <span
+            class="option px-4 py-4 text-lg border-4 border-green-200 rounded-lg text-xl font-semibold text-green-500 bg-green-100"
+            onclick="selectOption(this, 'nextButton1')">Electric Resistance Furnace</span>
+          <span
+            class="option px-4 py-4 text-lg border-4 border-green-200 rounded-lg text-xl font-semibold text-green-500 bg-green-100"
+            onclick="selectOption(this, 'nextButton1')">Heat Pump (Central or Mini Split)</span>
+          <span
+            class="option px-4 py-4 text-lg border-4 border-green-200 rounded-lg text-xl font-semibold text-green-500 bg-green-100 mb-2"
+            onclick="selectOption(this, 'nextButton1')">Boiler with Radiator</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-between items-center mt-6">
+      <div class="flex items-center justify-end">
+        <button id="nextButton2" class="bg-orange-500 text-white py-2 px-4 rounded-full hover:bg-orange-600" disabled>
+          <span class="text-xl font-bold p-2" onclick="nextPage('question1')">Next</span>
+        </button>
+      </div>
+      <div class="flex items-center justify-end space-x-2">
+        <button class="prev bg-orange-200 text-orange-600 pt-2 px-1 rounded shadow hover:bg-orange-300">
+          <span class="material-icons">keyboard_arrow_up</span>
+        </button>
+        <div class="h-full w-px bg-gray-300"></div>
+        <button class="next bg-orange-200 text-orange-600 pt-2 px-1 rounded shadow hover:bg-orange-300">
+          <span class="material-icons">keyboard_arrow_down</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="question2" class="question hidden bg-white p-6 rounded-lg shadow-lg">
+    <div class="flex flex-col gap-2 md:flex-col md:gap-4">
+      <p class="font-bold mb-3 text-lg">2. How is this home cooled? (Choose the main system, if more than one)</p>
+      <div class="lg:flex gap-2 gap-col-2">
+        <div class="flex flex-col gap-2 w-full lg:w-1/2 xl:w-1/2">
+          <span
+            class="option px-4 py-4 text-lg border-4 border-green-200 rounded-lg text-xl font-semibold text-green-500 bg-green-100"
+            onclick="selectOption(this, 'nextButton2')">Central Natural Gas Furnace</span>
+          <span
+            class="option px-4 py-4 text-lg border-4 border-green-200 rounded-lg text-xl font-semibold text-green-500 bg-green-100"
+            onclick="selectOption(this, 'nextButton2')">Electric Resistance Furnace</span>
+        </div>
+        <div class="flex flex-col gap-2 w-full lg:w-1/2 xl:w-1/2">
+          <span
+            class="option px-4 py-4 text-lg border-4 border-green-200 rounded-lg text-xl font-semibold text-green-500 bg-green-100"
+            onclick="selectOption(this, 'nextButton2')">Doesn't have Cooling</span>
+          <span
+            class="option px-4 py-4 text-lg border-4 border-green-200 rounded-lg text-xl font-semibold text-green-500 bg-green-100"
+            onclick="selectOption(this, 'nextButton2')">Don't know/Unsure</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-between items-center mt-6">
+      <div class="flex items-center justify-end">
+        <button id="nextButton2" class="bg-orange-500 text-white py-2 px-4 rounded-full hover:bg-orange-600" disabled>
+          <span class="text-xl font-bold p-2" onclick="nextPage('question2')">Next</span>
+        </button>
+      </div>
+      <div class="flex items-center justify-end space-x-2">
+        <button class="prev bg-orange-200 text-orange-600 pt-2 px-1 rounded shadow hover:bg-orange-300">
+          <span class="material-icons">keyboard_arrow_up</span>
+        </button>
+        <div class="h-full w-px bg-gray-300"></div>
+        <button class="next bg-orange-200 text-orange-600 pt-2 px-1 rounded shadow hover:bg-orange-300">
+          <span class="material-icons">keyboard_arrow_down</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="question3" class="question hidden bg-white p-6 rounded-lg shadow-lg">
+    <div class="flex flex-col gap-2 md:flex-col md:gap-4">
+      <p class="font-bold mb-3 text-lg">3. How is this home cooled? (Choose the main system, if more than one)</p>
+      <div class="lg:flex gap-2 gap-col-2">
+        <div class="flex flex-col gap-2 w-full lg:w-1/2 xl:w-1/2">
+          <span
+            class="option px-4 py-4 text-lg border-4 border-green-200 rounded-lg text-xl font-semibold text-green-500 bg-green-100"
+            onclick="selectOption(this, 'nextButton3')">Natural Gas w/ Storage Tank</span>
+          <span
+            class="option px-4 py-4 text-lg border-4 border-green-200 rounded-lg text-xl font-semibold text-green-500 bg-green-100"
+            onclick="selectOption(this, 'nextButton3')">Natural Gas Tankless</span>
+          <span
+            class="option px-4 py-4 text-lg border-4 border-green-200 rounded-lg text-xl font-semibold text-green-500 bg-green-100"
+            onclick="selectOption(this, 'nextButton3')">Electric w/ Storage Tank</span>
+        </div>
+        <div class="flex flex-col gap-2 w-full lg:w-1/2 xl:w-1/2">
+          <span
+            class="option px-4 py-4 text-lg border-4 border-green-200 rounded-lg text-xl font-semibold text-green-500 bg-green-100"
+            onclick="selectOption(this, 'nextButton3')">Electric Tankless</span>
+          <span
+            class="option px-4 py-4 text-lg border-4 border-green-200 rounded-lg text-xl font-semibold text-green-500 bg-green-100"
+            onclick="selectOption(this, 'nextButton3')">Heat Pump Water Heater</span>
+          <span
+            class="option px-4 py-4 text-lg border-4 border-green-200 rounded-lg text-xl font-semibold text-green-500 bg-green-100"
+            onclick="selectOption(this, 'nextButton3')">Don't know/Unsure</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-between items-center mt-6">
+      <div class="flex items-center justify-end">
+        <button id="nextButton2" class="bg-orange-500 text-white py-2 px-4 rounded-full hover:bg-orange-600" disabled>
+          <span class="text-xl font-bold p-2" onclick="nextPage('question3')">Next</span>
+        </button>
+      </div>
+      <div class="flex items-center justify-end space-x-2">
+        <button class="prev bg-orange-200 text-orange-600 pt-2 px-1 rounded shadow hover:bg-orange-300">
+          <span class="material-icons">keyboard_arrow_up</span>
+        </button>
+        <div class="h-full w-px bg-gray-300"></div>
+        <button class="next bg-orange-200 text-orange-600 pt-2 px-1 rounded shadow hover:bg-orange-300">
+          <span class="material-icons">keyboard_arrow_down</span>
+        </button>
+      </div>
+    </div>
+  </div>
+    <div id="question4" class="question hidden bg-white p-6 rounded-lg shadow-lg">
+      <div class="flex flex-col items-center gap-4">
+        <h2 class="text-xl font-bold">Let's SAVE YOUR PROGRESS...</h2>
+        <input type="email" placeholder="Enter email address"
+          class="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <p class="text-gray-600">By saving your progress you can skip questions next time. You can also SKIP and complete
+          this step later. Just click on SIGN IN on the top right corner.</p>
+        <div class="flex gap-4">
+          <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded">Save <span
+              class="ml-2">&#10004;</span></button>
+          <button id="complete"
+            class="next bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">Skip</button>
+        </div>
+      </div>
+    </div>
+    <div id="question5" class="question hidden bg-white p-6 rounded-lg shadow-lg">
+      <div id="loadingContainer" class="flex flex-col items-center justify-center h-full">
+        <h2 id="loadingMessage" class="text-center mb-5">Loading Data...</h2>
+        <div id="loader" class="loader">
+          
+          <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+  <script src="main.js">
+
+</script>
+
+
+
+</body>
+
+</html> 

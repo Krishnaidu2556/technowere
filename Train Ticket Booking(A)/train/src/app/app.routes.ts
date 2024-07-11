@@ -13,7 +13,7 @@ export const routes: Routes = [
         component:HomeComponent
     },
     {
-        path: 'search/:formStationId/:toStationId/:dateOfTravel ',
-        component:SearchComponent
+        path: 'search/:formStationId/:toStationId/:dateOfTravel',
+    component: SearchComponent
     }
 ];
