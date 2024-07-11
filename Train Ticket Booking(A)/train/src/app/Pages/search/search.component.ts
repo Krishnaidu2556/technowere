@@ -91,7 +91,7 @@ export class SearchComponent implements OnInit {
       "TrainAppBookingPassengers": [] as any
     }
     bookingObj.TrainAppBookingPassengers= this.passangerList
-    bookingObj.totalSeats= this.passanger List.length
+    bookingObj.totalSeats= this.passangerList.length
     this.trainService.bookTrain(bookingObj).subscribe((res:any)=>{
       if (res.result) {
         alert('Booking Success');
